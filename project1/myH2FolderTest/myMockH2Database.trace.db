@@ -1,0 +1,24 @@
+2022-05-05 21:11:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]CREAdsfTE TABLE ERS_USERS (\000d\000a\0009ERS_USERS_ID SERIAL\000d\000a\0009, ERS_USERNAME VARCHAR(50) UNIQUE\000d\000a\0009, ERS_PASSWORD VARCHAR(50) NOT NULL\000d\000a\0009, USER_FIRST_NAME VARCHAR(100)\000d\000a\0009, USER_LAST_NAME VARCHAR(100)\000d\000a\0009, USER_EMAIL VARCHAR(150) UNIQUE \000d\000a\0009, USER_ROLE_ID INTEGER\000d\000a\0009, PRIMARY KEY(ERS_USERS_ID)\000d\000a);"; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT"; SQL statement:
+CREAdsfTE TABLE ERS_USERS (
+	ERS_USERS_ID SERIAL
+	, ERS_USERNAME VARCHAR(50) UNIQUE
+	, ERS_PASSWORD VARCHAR(50) NOT NULL
+	, USER_FIRST_NAME VARCHAR(100)
+	, USER_LAST_NAME VARCHAR(100)
+	, USER_EMAIL VARCHAR(150) UNIQUE 
+	, USER_ROLE_ID INTEGER
+	, PRIMARY KEY(ERS_USERS_ID)
+); [42001-212]
+2022-05-05 21:11:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ERS_USERS" not found (this database is empty); SQL statement:
+SELECT * FROM ers_users WHERE ers_username = ? [42104-212]
+2022-05-05 21:11:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ERS_USERS" not found; SQL statement:
+DROP TABLE ERS_USERS [42102-212]
+2022-05-05 21:30:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-212]
+2022-05-05 21:31:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-212]
+2022-05-05 21:33:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No data is available [2000-212]
