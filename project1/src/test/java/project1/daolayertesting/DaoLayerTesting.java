@@ -31,7 +31,7 @@ class DaoLayerTesting {
 
 	@Test
 	void test() {
-		UserAccount testUser = accountDao.retrieveAccountByUsername(username);
+		UserAccount testUser = accountDao.retrieveAccountByUsername("username");
 		if(testUser == null)
 			fail("returned null instead of UserAccount object");
 		else
