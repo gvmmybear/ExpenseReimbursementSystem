@@ -40,11 +40,7 @@ class LoginServiceTesting {
 		// conducts verify login test
 		UserAccount test = service.verifyCredentials("username", "password");
 		
-		// checks for null first when asserts method is returning correct user data
-		if(test == null)
-			fail("Verify credentials returned null when a UserAccount should have been returned");
-		else {
-			assertEquals(testAccount.toString(), test.toString());
-		}
+		// asserts method is returning correct user data
+		assertEquals(testAccount.toString(), test.toString());
 	}
 }

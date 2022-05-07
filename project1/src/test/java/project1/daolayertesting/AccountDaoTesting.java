@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import project1.dao.implementations.UserAccountDaoImpl;
 import project1.models.UserAccount;
 
-class DaoLayerTesting {
+class AccountDaoTesting {
 	static String url = "jdbc:h2:./myH2FolderTest/myMockH2Database";
 	static String username = "mockuser";
 	static String password = "mockpw";
@@ -29,13 +29,21 @@ class DaoLayerTesting {
 		accountDao.h2DestroyDao();
 	}
 
+	// successful test returns generic user account with all fields equal
 	@Test
 	void test() {
 		UserAccount testUser = accountDao.retrieveAccountByUsername("username");
-		if(testUser == null)
-			fail("returned null instead of UserAccount object");
-		else
-			assertEquals(testUser.getUsername(), "username");
+		assertEquals(testUser.getUsername(), "username");
+		assertEquals(testUser.getPassword(), "password");
+		assertEquals(testUser.getFirstName(), "John");
+		assertEquals(testUser.getLastName(), "Doe");
+		assertEquals(testUser.getEmail(), "email@emailaddress.com");	
 	}
-
+	
+	// incorrect user-name should return a null value for the UserAccount object.
+	@Test
+	void test2() {
+		UserAccount testUser = accountDao.retrieveAccountByUsername("incorrectUser");
+		assertEquals(testUser, null);
+	}
 }
