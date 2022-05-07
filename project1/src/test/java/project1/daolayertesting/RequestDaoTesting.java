@@ -45,17 +45,6 @@ class RequestDaoTesting {
 		System.out.println("H2 Reimbursement Requests table has been created!");
 		System.out.println("-------------------------------------");
 	}
-	
-//	private int reqId; 
-//	private double reqAmount; 
-//	private Timestamp reqSubmissionTime; 
-//	private Timestamp reqResolvedTime; 
-//	private String reqDescription; 
-//	private String reqReceipt; 
-//	private int reqAuthor; 
-//	private int reqResolver; 
-//	private int reqStatusId;
-//	private int reqTypeId;
 
 	@AfterEach
 	void tearDown() throws Exception {
