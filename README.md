@@ -7,15 +7,17 @@ A manager account type is able to resolve requests via a request table that is d
 
 
 ## Technologies Used
-
 * Java SE 11
 * Apache Tomcat 9.0.62
 * PostgreSQL 13
+* AWS RDS
 * JavaScript ES6+
+* JUnit
+* CSS/HTML
+* Bootstrap
 
 
 ## Features
-
 List of features ready and TODOs for future development
 * Fully functional User Interface 
 * Launch ready for localhost server
